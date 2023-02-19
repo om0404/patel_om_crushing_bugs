@@ -25,7 +25,12 @@ function changeBGImage() {
 	// and updating the background-image style of the puzzle board element.
 
 	// bug fix #2 should go here. it's at most 3 lines of JS code.
-
+	let imgs = puzzleBoard.querySelectorAll('img')
+	console.log(document.querySelector('.puzzle-pieces'),imgs)
+	for (let i=0; i<imgs.length; i++) {
+		document.querySelector('.puzzle-pieces').appendChild(imgs[i])
+	}
+	puzzleBoard.style.backgroundImage = `url(images/backGround${this.id}.jpg)`;
 }
 
 function handleStartDrag() { 
